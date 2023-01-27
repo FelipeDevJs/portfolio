@@ -1,0 +1,243 @@
+*{ 
+    margin:0;
+    padding: 0;
+}
+/* HEADER */
+header {
+    width:100%;
+    height: 50px;
+    background: rgb(19, 1, 98);
+    display: flex;
+    justify-content: space-around;
+}
+.logo {
+    width: 125px;
+    height: 50px;
+    /* background: red; */
+    margin-left: 10px;
+}
+.menu {
+    width: 250px;
+    height: 50px;
+    /* background: red; */
+    /* margin-right: 10px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu ul {
+    display: flex;
+    list-style: none;
+}
+.menu ul li {
+    padding: 15px;
+    /* background: red; */
+    margin: 5px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* PRINCIPAL */
+
+.principal {
+    width: 100%;
+    height: calc(100vh - 50px);
+    background: rgb(13, 8, 34);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@keyframes animate1 {
+  0% {opacity:0;} 
+  10%, 20% {opacity:1;}
+  30%,40%,50%,60%,70%,80%,90%,100% {opacity:0;}
+}
+@keyframes animate2 {
+  0%,10%,20%,30% {opacity:0;}
+  40%,50%{opacity:1;}
+  60%,70%,80%,90%,100% {opacity:0;}
+}
+@keyframes animate3 {
+  0%,10%,20%,30%,40%,50%,60% {opacity:0;}
+  70%,80% {opacity:1;}
+  90%, 100% {opacity:0;}
+}
+.box {
+    width: 80%;
+    height: auto;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    /* background: red; */
+}
+.boxiam {
+    width: 400px;
+    height: 150px;
+    position: relative;
+    /* background: blueviolet; */
+    display: flex;
+    align-content: center;
+}
+.boxiamtext {
+    position: absolute;
+    /* top: -60px; */
+}
+.iam {
+    color: #fff;
+    /* background: red; */
+    max-width: 400px;
+    width: 400px;
+    height: auto;
+    position: absolute;
+}
+ .iam:nth-child(1){
+    /* animation-delay: 9s; */
+    animation: animate1 10s ease infinite;
+}
+.iam:nth-child(2){
+    animation: animate2 10s ease infinite;
+} 
+.iam:nth-child(3){
+    animation: animate3 10s ease infinite;
+} 
+.iam h1 {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+.slide {
+    width: 25px;
+    /* max-width: 30px; */
+    height: 200px;
+    /* background: green; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.circle {
+    width: 20px;
+    height: 20px;
+    /* background: red; */
+    border-radius: 30px;
+    border: 2px solid red;
+}
+.circle:nth-child(1){
+  animation: circle1 10s ease infinite;
+}
+.circle:nth-child(3){
+  animation: circle2 10s ease infinite;
+}
+.circle:nth-child(5){
+  animation: circle3 10s ease infinite;
+}
+@keyframes circle1 {
+  0% {background:transparent;} 
+  10%, 20% {background: red;}
+  30%,40%,50%,60%,70%,80%,90%,100% {background:transparent;}
+}
+@keyframes circle2 {
+  0%,10%,20%,30% {background:transparent;}
+  40%,50%{background:red;}
+  60%,70%,80%,90%,100% {background:transparent;}
+}
+@keyframes circle3 {
+  0%,10%,20%,30%,40%,50%,60% {background:transparent;}
+  70%,80% {background:red;}
+  90%, 100% {background:transparent;}
+}
+.line {
+    width: 2px;
+    height: 40px;
+    background: #fff;
+}
+@media only screen and (max-width: 600px) {
+    .box {
+      flex-direction: column;
+      /* background: green; */
+      height: 60%;
+      
+    }
+    .slide {
+        flex-direction: row;
+        width: 160px;
+        height: 30px;
+        /* background: yellow; */
+        margin-top: 20px;
+    }
+    .line {
+        width: 40px;
+        height: 2px;
+    }
+  }
+
+
+/* SKILLS */
+
+.skills {
+    width: 100%;
+    height: auto;
+    background: rgb(13, 8, 34);
+    /* background: purple; */
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.title {
+    width: 100%;
+    height: 100px;
+    /* background: goldenrod; */
+    display: flex;
+    align-items: center;
+
+}
+.skilltitle {
+    /* background: red; */
+    margin-left: 55px;
+}
+.skilltitle h1 {
+    font-size: 40px;
+}
+.boxskill{
+    max-width: 75%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    /* background-color: red; */
+}
+.boxskills {
+    width: 150px;
+    height: auto;
+    /* background: red; */
+    margin: 20px 30px 20px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.boxskills img {
+    width: 150px;
+}
+
+@media only screen and (max-width: 600px) {
+    .skills {
+        /* background: gold; */
+        height: auto;
+    }
+}
+
+/* ANIMACAO */
+[data-anime]{
+    opacity: 0;
+    transition: .3s;
+}
+[data-anime="right"]{
+    transform: translate3d(50px,0,0);
+}
+[data-anime].animate {
+    opacity: 1;
+    transform: translate3d(0,0,0);
+}
